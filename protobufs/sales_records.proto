@@ -6,6 +6,20 @@ message PingSalesRecordsResponse{
     string ack=1;
 }
 
+message SalesRecordsRequest {
+    string region = 1;
+    string item_type = 2; 
+    string units_sold = 3;
+    string unit_price = 4;
+    string unit_cost = 5;
+    string source = 6;
+}
+
+message SalesRecordsResponse {
+    string data = 1;
+}
+
 service SalesRecords{
     rpc PingSalesRecords(EmptyMesage) returns (PingSalesRecordsResponse);
+    rpc SendSalesRecords(SalesRecordsRequest) returns (SalesRecordsResponse);
 }

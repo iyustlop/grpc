@@ -9,6 +9,13 @@ class SalesRecords(sales_records_pb2_grpc.SalesRecordsServicer):
         response = sales_records_pb2.PingSalesRecordsResponse(ack='1')
         return response
 
+    def SendSalesRecords(self, request, context):
+        print(request.region)
+        print(request.source)
+
+        response = sales_records_pb2.SalesRecordsResponse(data=request.unit_cost)
+        return response
+
 
 def main():
     server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))

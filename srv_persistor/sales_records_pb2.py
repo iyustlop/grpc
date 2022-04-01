@@ -3,6 +3,7 @@
 # source: sales_records.proto
 """Generated protocol buffer code."""
 from google.protobuf import descriptor as _descriptor
+from google.protobuf import descriptor_pool as _descriptor_pool
 from google.protobuf import message as _message
 from google.protobuf import reflection as _reflection
 from google.protobuf import symbol_database as _symbol_database
@@ -13,78 +14,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor.FileDescriptor(
-  name='sales_records.proto',
-  package='',
-  syntax='proto3',
-  serialized_options=None,
-  create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x13sales_records.proto\"\r\n\x0b\x45mptyMesage\"\'\n\x18PingSalesRecordsResponse\x12\x0b\n\x03\x61\x63k\x18\x01 \x01(\t2K\n\x0cSalesRecords\x12;\n\x10PingSalesRecords\x12\x0c.EmptyMesage\x1a\x19.PingSalesRecordsResponseb\x06proto3'
-)
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x13sales_records.proto\"\r\n\x0b\x45mptyMesage\"\'\n\x18PingSalesRecordsResponse\x12\x0b\n\x03\x61\x63k\x18\x01 \x01(\t\"\x83\x01\n\x13SalesRecordsRequest\x12\x0e\n\x06region\x18\x01 \x01(\t\x12\x11\n\titem_type\x18\x02 \x01(\t\x12\x12\n\nunits_sold\x18\x03 \x01(\t\x12\x12\n\nunit_price\x18\x04 \x01(\t\x12\x11\n\tunit_cost\x18\x05 \x01(\t\x12\x0e\n\x06source\x18\x06 \x01(\t\"$\n\x14SalesRecordsResponse\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t2\x8c\x01\n\x0cSalesRecords\x12;\n\x10PingSalesRecords\x12\x0c.EmptyMesage\x1a\x19.PingSalesRecordsResponse\x12?\n\x10SendSalesRecords\x12\x14.SalesRecordsRequest\x1a\x15.SalesRecordsResponseb\x06proto3')
 
 
 
-
-_EMPTYMESAGE = _descriptor.Descriptor(
-  name='EmptyMesage',
-  full_name='EmptyMesage',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=23,
-  serialized_end=36,
-)
-
-
-_PINGSALESRECORDSRESPONSE = _descriptor.Descriptor(
-  name='PingSalesRecordsResponse',
-  full_name='PingSalesRecordsResponse',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='ack', full_name='PingSalesRecordsResponse.ack', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=38,
-  serialized_end=77,
-)
-
-DESCRIPTOR.message_types_by_name['EmptyMesage'] = _EMPTYMESAGE
-DESCRIPTOR.message_types_by_name['PingSalesRecordsResponse'] = _PINGSALESRECORDSRESPONSE
-_sym_db.RegisterFileDescriptor(DESCRIPTOR)
-
+_EMPTYMESAGE = DESCRIPTOR.message_types_by_name['EmptyMesage']
+_PINGSALESRECORDSRESPONSE = DESCRIPTOR.message_types_by_name['PingSalesRecordsResponse']
+_SALESRECORDSREQUEST = DESCRIPTOR.message_types_by_name['SalesRecordsRequest']
+_SALESRECORDSRESPONSE = DESCRIPTOR.message_types_by_name['SalesRecordsResponse']
 EmptyMesage = _reflection.GeneratedProtocolMessageType('EmptyMesage', (_message.Message,), {
   'DESCRIPTOR' : _EMPTYMESAGE,
   '__module__' : 'sales_records_pb2'
@@ -99,31 +36,32 @@ PingSalesRecordsResponse = _reflection.GeneratedProtocolMessageType('PingSalesRe
   })
 _sym_db.RegisterMessage(PingSalesRecordsResponse)
 
+SalesRecordsRequest = _reflection.GeneratedProtocolMessageType('SalesRecordsRequest', (_message.Message,), {
+  'DESCRIPTOR' : _SALESRECORDSREQUEST,
+  '__module__' : 'sales_records_pb2'
+  # @@protoc_insertion_point(class_scope:SalesRecordsRequest)
+  })
+_sym_db.RegisterMessage(SalesRecordsRequest)
 
+SalesRecordsResponse = _reflection.GeneratedProtocolMessageType('SalesRecordsResponse', (_message.Message,), {
+  'DESCRIPTOR' : _SALESRECORDSRESPONSE,
+  '__module__' : 'sales_records_pb2'
+  # @@protoc_insertion_point(class_scope:SalesRecordsResponse)
+  })
+_sym_db.RegisterMessage(SalesRecordsResponse)
 
-_SALESRECORDS = _descriptor.ServiceDescriptor(
-  name='SalesRecords',
-  full_name='SalesRecords',
-  file=DESCRIPTOR,
-  index=0,
-  serialized_options=None,
-  create_key=_descriptor._internal_create_key,
-  serialized_start=79,
-  serialized_end=154,
-  methods=[
-  _descriptor.MethodDescriptor(
-    name='PingSalesRecords',
-    full_name='SalesRecords.PingSalesRecords',
-    index=0,
-    containing_service=None,
-    input_type=_EMPTYMESAGE,
-    output_type=_PINGSALESRECORDSRESPONSE,
-    serialized_options=None,
-    create_key=_descriptor._internal_create_key,
-  ),
-])
-_sym_db.RegisterServiceDescriptor(_SALESRECORDS)
+_SALESRECORDS = DESCRIPTOR.services_by_name['SalesRecords']
+if _descriptor._USE_C_DESCRIPTORS == False:
 
-DESCRIPTOR.services_by_name['SalesRecords'] = _SALESRECORDS
-
+  DESCRIPTOR._options = None
+  _EMPTYMESAGE._serialized_start=23
+  _EMPTYMESAGE._serialized_end=36
+  _PINGSALESRECORDSRESPONSE._serialized_start=38
+  _PINGSALESRECORDSRESPONSE._serialized_end=77
+  _SALESRECORDSREQUEST._serialized_start=80
+  _SALESRECORDSREQUEST._serialized_end=211
+  _SALESRECORDSRESPONSE._serialized_start=213
+  _SALESRECORDSRESPONSE._serialized_end=249
+  _SALESRECORDS._serialized_start=252
+  _SALESRECORDS._serialized_end=392
 # @@protoc_insertion_point(module_scope)
